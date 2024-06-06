@@ -1,0 +1,41 @@
+server:
+  port: 5000
+
+logging:
+  level:
+    web:
+        dutamedia: DEBUG
+
+spring:
+  jackson:
+  # redis:
+  #   host: ${REDIS_HOST:localhost}
+  #   port: ${REDIS_PORT:6379}
+  #   password: ${REDIS_PWD:}
+  #   timeout: ${REDIS_TIMEOUT:100000000}
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/dutamedia
+    username: root
+    password: pass1234
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate :
+        dialect : org.hibernate.dialect.PostgreSQLDialect
+  banner:
+    location: banner.txt
+  output:
+    ansi:
+      enabled: ALWAYS
+# redis:
+#   rekber:
+#     key:
+#       otp: ${REDIS_OTP_OTP:otp}
+#       token: ${REDIS_REKBER_TOKEN:token}
+#       transaction: ${REDIS_REKBER_TRANSACTION:transaction}
+app:
+  jwt:
+    secret: secret
+    expiration-days: 14
