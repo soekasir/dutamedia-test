@@ -7,8 +7,7 @@ function sumOfSquareNumbers(numbers){
 }
 
 function sumOfSquareNumbers2(numbers){
-  numbers=numbers.map(n=>parseInt(n)*parseInt(n));
-  return numbers.reduce((total,n)=>total+n);
+  return numbers.map(n=>parseInt(n)*parseInt(n)).reduce((total,n)=>total+n);
 }
 
 console.log(
