@@ -6,6 +6,12 @@ function sumOfSquareNumbers(numbers){
   return result;
 }
 
+function sumOfSquareNumbers2(numbers){
+  numbers=numbers.map(n=>parseInt(n)*parseInt(n));
+  return numbers.reduce((total,n)=>total+n);
+}
+
 console.log(
-  sumOfSquareNumbers([5,3,6,2,'7']) //123
+  sumOfSquareNumbers([5,3,6,2,'7']), //123
+  sumOfSquareNumbers2([5,3,6,2,'7']) //123
 );
